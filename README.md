@@ -101,10 +101,11 @@ GitHub stores the source code and runs the checks in `.github/workflows/ci.yml`;
 
    Replace the remote URL with your repository URL. The root `.gitignore` excludes dependencies, build output, local databases, Python caches, and environment secrets.
 3. GitHub Actions runs backend tests and frontend lint, tests, and build on pushes and pull requests to `main`.
+4. `.github/workflows/deploy.yml` builds and publishes a Docker image to GitHub Container Registry (GHCR) on pushes to `main`, version tags (`v*`), or a manual workflow run. The image is named `ghcr.io/YOUR_USERNAME/YOUR_REPOSITORY`; the workflow uses GitHub's `GITHUB_TOKEN`, so no registry password needs to be added.
 
-### Deploy the app container
+### Run the published app container
 
-In your Docker hosting provider, create a web service from the GitHub repository and configure:
+GitHub Actions publishes the image but does not host or run the app. In a Docker hosting provider, create a web service using the published GHCR image and configure:
 
 - **Build context:** repository root
 - **Dockerfile:** `Dockerfile`
@@ -113,6 +114,8 @@ In your Docker hosting provider, create a web service from the GitHub repository
 - **Persistent storage:** mount a durable volume and set `DATABASE_URL` to a SQLite file on that volume, for example `sqlite:////var/data/hireshield.db`
 
 The default SQLite database lives inside the app directory and is suitable for local development, but container filesystems may be temporary. Configure persistent storage before accepting user accounts or reports, otherwise data can be lost when the host replaces the container. Do not commit `.env` files or production credentials; set secrets through your host's environment settings.
+
+If the GHCR package is private, configure your hosting provider with a GitHub token that can read packages, or make the package public in the GitHub package settings.
 
 To build and run the same container locally:
 
