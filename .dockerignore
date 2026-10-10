@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+venv
+node_modules
+**/node_modules
+frontend/dist
+backend/__pycache__
+backend/.pytest_cache
+backend/*.db
+backend/*.db-*
+backend/evaluation_results.json
+.env
+.env.*
+!.env.example
+*.log

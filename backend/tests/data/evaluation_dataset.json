@@ -1,0 +1,258 @@
+[
+  {
+    "id": "scam_01",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Congratulations! You have been selected for Data Associate at Google. A refundable deposit of $150 registration fee is required for training materials. Kindly pay within 24 hours to secure your slot. Contact hr-google-team@gmail.com",
+    "url": null,
+    "notes": "Upfront fee + freemail impersonation + urgency"
+  },
+  {
+    "id": "scam_02",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Hi, your resume was shortlisted for Remote Operations Assistant. Review the briefing and confirm your slot here: https://bit.ly/job-interview-slot",
+    "url": "https://bit.ly/job-interview-slot",
+    "notes": "Shortened link evasion"
+  },
+  {
+    "id": "scam_03",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Urgent hiring! Direct selection for Junior Analyst. Please share your bank account, routing number and SSN before your start date to process payroll immediately.",
+    "url": null,
+    "notes": "Sensitive banking & SSN data before offer"
+  },
+  {
+    "id": "scam_04",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Amazon Careers: You have been accepted for Warehouse Supervisor. Mandatory onboarding fee of $250 for uniform and security deposit. Transfer immediately.",
+    "url": "http://careers-amazon-verify.xyz",
+    "notes": "Onboarding fee + lookalike suspicious TLD + HTTP"
+  },
+  {
+    "id": "scam_05",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Hello, saw your profile. We have an executive assistant opening. Connect with our hiring manager on Telegram at @executive_recruiters for fast onboarding.",
+    "url": null,
+    "notes": "Off-platform pivot to Telegram"
+  },
+  {
+    "id": "scam_06",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Work from home part-time. No interview needed, guaranteed placement. Earn $500 per day doing simple document typing tasks. Limited slots left!",
+    "url": null,
+    "notes": "Too good to be true + no interview + urgency"
+  },
+  {
+    "id": "scam_07",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Microsoft Recruitment: Selected candidates must provide laptop equipment fee of $300 refundable upon completion of week 1. Reply within 24 hours.",
+    "url": "http://192.168.1.105/apply",
+    "notes": "Equipment fee + IP host link + urgency"
+  },
+  {
+    "id": "scam_08",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Deloitte Campus Hiring: Please send resume to deloitte.campus.hiring@yahoo.com immediately. Urgent requirement for freshers.",
+    "url": null,
+    "notes": "Freemail impersonation of Deloitte"
+  },
+  {
+    "id": "scam_09",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Dear candidate, please verify your candidate portal at http://recruitment-apple-jobs.com to confirm your interview schedule.",
+    "url": "http://recruitment-apple-jobs.com",
+    "notes": "Typosquat lookalike + HTTP"
+  },
+  {
+    "id": "scam_10",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Final notice: Pay your laptop kit deposit of $199 to confirm employment. Last chance before we release your seat to another applicant.",
+    "url": null,
+    "notes": "Laptop deposit fee + last chance pressure"
+  },
+  {
+    "id": "scam_11",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Selected for remote clerk. Please verify your identity by providing your Aadhaar number, PAN card, and bank details to hr-onboard@outlook.com.",
+    "url": null,
+    "notes": "Sensitive ID details + bank details"
+  },
+  {
+    "id": "scam_12",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Great news! Your profile matches our freelance data entry project. Message on WhatsApp at +1987654321 to start right now.",
+    "url": null,
+    "notes": "Off-platform pivot to WhatsApp"
+  },
+  {
+    "id": "scam_13",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Congratulations, you are selected for immediate joining only. No skills or experience required, earn $400 daily. Limited openings.",
+    "url": null,
+    "notes": "Unrealistic compensation + no experience required"
+  },
+  {
+    "id": "scam_14",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Infosys HR: Kindly pay processing fee of ₹3000 to secure your slot. Reply within 12 hours. Send confirmation receipt to infosys.careers@gmail.com",
+    "url": null,
+    "notes": "Processing fee + freemail + urgency"
+  },
+  {
+    "id": "scam_15",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "To activate your employee portal, submit credit card details and CVV for identity verification at http://203.0.113.195/verify",
+    "url": "http://203.0.113.195/verify",
+    "notes": "Credit card + CVV + direct IP host"
+  },
+  {
+    "id": "scam_16",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "Exclusive intern role at Meta. Fill out your details at https://careers-meta-hire.top right now.",
+    "url": "https://careers-meta-hire.top",
+    "notes": "Lookalike domain + low-reputation .top TLD"
+  },
+  {
+    "id": "scam_17",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Security deposit of $100 required prior to joining. Refundable after 30 days of service. Offer expires today.",
+    "url": null,
+    "notes": "Security deposit + offer expires today"
+  },
+  {
+    "id": "scam_18",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "We found your CV. Please click http://tinyurl.com/fast-job-offer to verify your phone number and interview time.",
+    "url": "http://tinyurl.com/fast-job-offer",
+    "notes": "HTTP + tinyurl shortener"
+  },
+  {
+    "id": "scam_19",
+    "is_scam": true,
+    "expected_min_risk": "HIGH",
+    "text": "Tesla internship offer: Kindly deposit training cost of $350 to Tesla training account. Dear applicant kindly share fast.",
+    "url": null,
+    "notes": "Training cost fee + poor grammar pressure"
+  },
+  {
+    "id": "scam_20",
+    "is_scam": true,
+    "expected_min_risk": "MEDIUM",
+    "text": "JPMorgan Chase recruiter here. Connect with me on Signal at +15550192 to complete your screening.",
+    "url": null,
+    "notes": "Off-platform pivot to Signal"
+  },
+  {
+    "id": "legit_01",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Software Engineer, Backend at Stripe. You will build highly scalable APIs and distributed systems in Go and Ruby. 3+ years experience with relational databases and distributed systems required. Competitive compensation, health insurance, and 401(k) matching. Apply online at https://stripe.com/jobs",
+    "url": "https://stripe.com/jobs",
+    "notes": "Legitimate tech job posting with HTTPS brand domain"
+  },
+  {
+    "id": "legit_02",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Product Designer at Figma. We are looking for an experienced designer to craft intuitive collaborative workflows. Strong portfolio demonstrating systems thinking and visual execution required. Please submit your portfolio through our career portal.",
+    "url": "https://www.figma.com/careers",
+    "notes": "Legitimate design role"
+  },
+  {
+    "id": "legit_03",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Associate Consultant at McKinsey & Company. Candidates should possess strong analytical reasoning and leadership capabilities. We invite university seniors to apply through their campus career center.",
+    "url": "https://www.mckinsey.com/careers",
+    "notes": "Standard campus consulting recruitment"
+  },
+  {
+    "id": "legit_04",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Junior Data Analyst at Spotify. Responsibilities include querying SQL databases, building dashboards in Tableau, and presenting product metrics to cross-functional teams. Comprehensive benefits and flexible hybrid work model.",
+    "url": "https://www.lifeatspotify.com/jobs",
+    "notes": "Authentic entry-level data job"
+  },
+  {
+    "id": "legit_05",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Frontend Developer Intern at GitHub. Work alongside our core web platform team using React, TypeScript, and modern CSS. Mentorship provided throughout the 12-week summer program. Applications open until March 31st.",
+    "url": "https://github.com/about/careers",
+    "notes": "Standard internship posting with clear deadline"
+  },
+  {
+    "id": "legit_06",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Customer Support Specialist at Basecamp. We are looking for a thoughtful communicator who enjoys solving technical issues for customers. Fully remote position. Check our job board for details.",
+    "url": "https://basecamp.com/jobs",
+    "notes": "Legitimate remote support role"
+  },
+  {
+    "id": "legit_07",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "DevOps Engineer at Datadog. Maintain our Kubernetes clusters, monitor telemetry pipelines, and implement CI/CD best practices. Competitive equity package and educational stipend.",
+    "url": "https://careers.datadoghq.com",
+    "notes": "Legitimate engineering job"
+  },
+  {
+    "id": "legit_08",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Content Marketing Specialist at Notion. Craft case studies, publish community newsletters, and manage blog editorial calendars. Requires strong writing samples.",
+    "url": "https://www.notion.so/careers",
+    "notes": "Standard marketing role"
+  },
+  {
+    "id": "legit_09",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Research Assistant at Stanford AI Lab. Collaborate on empirical evaluations of generative models. Applicants should have proficiency in PyTorch and linear algebra.",
+    "url": "https://ai.stanford.edu",
+    "notes": "Legitimate academic research opening"
+  },
+  {
+    "id": "legit_10",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Account Executive at Slack. Manage enterprise relationships, deliver software demonstrations, and negotiate annual contracts with prospective enterprise clients.",
+    "url": "https://slack.com/careers",
+    "notes": "Standard enterprise sales role"
+  },
+  {
+    "id": "legit_11",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Cybersecurity Analyst at CrowdStrike. Monitor threat alerts, conduct malware triage, and draft incident response documentation. SANS or CompTIA certifications preferred.",
+    "url": "https://www.crowdstrike.com/careers",
+    "notes": "Legitimate security role"
+  },
+  {
+    "id": "legit_12",
+    "is_scam": false,
+    "expected_min_risk": "LOW",
+    "text": "Graduate Trainee at Unilever. Rotational leadership program across supply chain, operations, and brand management. Apply via the Unilever Future Leaders portal.",
+    "url": "https://www.unilever.com/careers",
+    "notes": "Standard graduate rotational program"
+  }
+]
