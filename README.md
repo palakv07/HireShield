@@ -81,9 +81,7 @@ npm run dev
 
 ---
 
-##  GitHub & Deployment
-
-GitHub stores the source code and runs the checks in `.github/workflows/ci.yml`; GitHub Pages cannot host the FastAPI backend or its database. The included `Dockerfile` builds the React frontend and serves it from the FastAPI app, so deploy the container to a host that supports Docker.
+## GitHub Pages Deployment
 
 ### Push this project to GitHub
 
@@ -100,31 +98,10 @@ GitHub stores the source code and runs the checks in `.github/workflows/ci.yml`;
    ```
 
    Replace the remote URL with your repository URL. The root `.gitignore` excludes dependencies, build output, local databases, Python caches, and environment secrets.
-3. GitHub Actions runs backend tests and frontend lint, tests, and build on pushes and pull requests to `main`.
-4. `.github/workflows/deploy.yml` builds and publishes a Docker image to GitHub Container Registry (GHCR) on pushes to `main`, version tags (`v*`), or a manual workflow run. The image is named `ghcr.io/YOUR_USERNAME/YOUR_REPOSITORY`; the workflow uses GitHub's `GITHUB_TOKEN`, so no registry password needs to be added.
+3. In the repository, open **Settings → Pages** and set the source to **GitHub Actions**.
+4. Push to `main`. The **CI** workflow runs the checks. When it succeeds, `.github/workflows/deploy.yml` builds the frontend and publishes it to GitHub Pages automatically. The live URL is shown in the workflow's deployment job and under **Settings → Pages**; it is usually `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/`.
 
-### Run the published app container
-
-GitHub Actions publishes the image but does not host or run the app. In a Docker hosting provider, create a web service using the published GHCR image and configure:
-
-- **Build context:** repository root
-- **Dockerfile:** `Dockerfile`
-- **Port:** use the port supplied by the hosting platform (the container reads `PORT`, defaulting to `8000`)
-- **Health check:** `/api/health`
-- **Persistent storage:** mount a durable volume and set `DATABASE_URL` to a SQLite file on that volume, for example `sqlite:////var/data/hireshield.db`
-
-The default SQLite database lives inside the app directory and is suitable for local development, but container filesystems may be temporary. Configure persistent storage before accepting user accounts or reports, otherwise data can be lost when the host replaces the container. Do not commit `.env` files or production credentials; set secrets through your host's environment settings.
-
-If the GHCR package is private, configure your hosting provider with a GitHub token that can read packages, or make the package public in the GitHub package settings.
-
-To build and run the same container locally:
-
-```bash
-docker build -t hireshield .
-docker run --rm -p 8000:8000 hireshield
-```
-
-Open [http://localhost:8000](http://localhost:8000) for the app and [http://localhost:8000/docs](http://localhost:8000/docs) for API documentation.
+This workflow publishes a **static frontend only**. GitHub Pages and GitHub Actions do not run the FastAPI backend or SQLite database. Therefore, backend-powered features such as analysis, authentication, reporting, feedback, and trends will not work on this site. Running those features requires hosting the backend and database on a server; this deployment does not configure one.
 
 ---
 
