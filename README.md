@@ -105,6 +105,7 @@ This workflow publishes a **static frontend only**. GitHub Pages and GitHub Acti
 
 ---
 
+<<<<<<< HEAD
 ## Full-stack Docker Deployment
 
 The Docker deployment runs the built React frontend and FastAPI backend together in the app container. Caddy sits in front as a reverse proxy and automatically provisions/renews HTTPS certificates. The app and database are not exposed directly to the internet; only ports 80 and 443 are published.
@@ -199,6 +200,8 @@ Open `http://localhost` (Caddy will not issue a public TLS certificate for `loca
 
 ---
 
+=======
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 ##  Testing & Benchmark Evaluation
 
 ### Run All Tests (Backend + Frontend)

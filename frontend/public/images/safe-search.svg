@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="25" x2="492" y2="328" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E3F3FF"/>
+      <stop offset="1" stop-color="#E3F6EA"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="227" y1="64" x2="368" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#147DB2"/>
+      <stop offset="1" stop-color="#183A79"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="340" rx="28" fill="url(#bg)"/>
+  <circle cx="84" cy="81" r="37" fill="#fff" fill-opacity=".6"/>
+  <circle cx="436" cy="278" r="50" fill="#fff" fill-opacity=".48"/>
+  <path d="M291 56c29 20 63 35 97 44v63c0 57-40 102-97 126-57-24-97-69-97-126v-63c34-9 68-24 97-44Z" fill="url(#shield)"/>
+  <path d="M291 78c23 15 49 26 74 33v52c0 42-28 77-74 99-46-22-74-57-74-99v-52c25-7 51-18 74-33Z" fill="#fff" fill-opacity=".08"/>
+  <circle cx="277" cy="158" r="36" stroke="#fff" stroke-width="11"/>
+  <path d="m303 184 31 31" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+  <path d="m331 146 10 10 18-21" stroke="#50E0B1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="52" y="143" width="154" height="82" rx="16" fill="#fff"/>
+  <circle cx="80" cy="172" r="12" fill="#DDF6EB"/>
+  <path d="m75 172 4 4 7-8" stroke="#189875" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="101" y="166" width="79" height="6" rx="3" fill="#27435D"/>
+  <rect x="101" y="179" width="59" height="5" rx="2.5" fill="#B1BFCA"/>
+  <rect x="68" y="201" width="122" height="8" rx="4" fill="#E7F4EF"/>
+  <rect x="369" y="116" width="107" height="79" rx="15" fill="#fff"/>
+  <rect x="385" y="133" width="71" height="6" rx="3" fill="#27435D"/>
+  <rect x="385" y="147" width="52" height="5" rx="2.5" fill="#B1BFCA"/>
+  <rect x="385" y="165" width="74" height="14" rx="7" fill="#DDF6EB"/>
+  <circle cx="447" cy="172" r="4" fill="#189875"/>
+  <path d="M112 265h92m214-1h35" stroke="#9EC6D4" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="172" cy="266" r="5" fill="#43B99E"/>
+  <circle cx="419" cy="264" r="5" fill="#43B99E"/>
+</svg>

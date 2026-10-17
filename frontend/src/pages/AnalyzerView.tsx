@@ -9,9 +9,14 @@ import {
   AlertOctagon,
   Copy,
   Check,
+<<<<<<< HEAD
   ShieldQuestion,
   ShieldCheck,
   BriefcaseBusiness,
+=======
+  Sparkles,
+  ShieldQuestion,
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
   Lock,
   Layers,
   CheckCircle,
@@ -127,7 +132,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
     <div className="page-wrap analyzer-page">
       <section className="hero-section">
         <div className="hero-copy">
+<<<<<<< HEAD
           <div className="eyebrow-pill"><ShieldCheck size={15} /> Your job search sidekick</div>
+=======
+          <div className="eyebrow-pill"><Sparkles size={15} /> Your job search sidekick</div>
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <h1>Big career energy.<br /><span>Scam-proof instincts.</span></h1>
           <p className="hero-description">
             Your first job should be exciting—not sketchy. Check recruiter messages and job offers, learn the red flags, and make your next move with confidence.
@@ -147,6 +156,7 @@ Disclaimer: ${analysisResult.disclaimer}`;
           </div>
         </div>
         <div className="hero-visual">
+<<<<<<< HEAD
           <img
             className="hero-image"
             src="/images/homepage.jpg"
@@ -156,6 +166,14 @@ Disclaimer: ${analysisResult.disclaimer}`;
           <div className="hero-float-card hero-level-card">
             <span className="level-icon"><BriefcaseBusiness size={16} /></span>
             
+=======
+          <img src="/images/student-opportunity.svg" alt="A student exploring a job opportunity safely on a laptop" />
+          <div className="hero-visual-label"><span className="live-dot" /> Your career, your call</div>
+          <div className="hero-float-card hero-level-card">
+            <span className="level-icon"><Sparkles size={16} /></span>
+            <span><small>SCAM RADAR</small><strong>Level 1 · Offer Scout</strong></span>
+            <span className="level-arrow">↗</span>
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           </div>
           <div className="hero-float-card hero-safe-card">
             <span className="safe-check"><Check size={15} /></span>
@@ -257,7 +275,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
                 id="example-select"
                 onChange={(e) => e.target.value && handleLoadSample(e.target.value)}
                 defaultValue=""
+<<<<<<< HEAD
                 className="w-full sm:w-auto text-xs font-medium bg-[#F6F8FB] hover:bg-[#E6ECF3]/60 text-[#0B1F3A] border border-[#E6ECF3] rounded-lg px-3 py-2 focus:outline-none focus:border-[#1268E8] cursor-pointer"
+=======
+                className="w-full sm:w-auto text-xs font-medium bg-[#F6F8FB] hover:bg-[#E6ECF3]/60 text-[#0B1F3A] border border-[#E6ECF3] rounded-lg px-3 py-2 focus:outline-none focus:border-[#00A896] cursor-pointer"
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               >
                 <option value="" disabled>
                   Load an example...
@@ -293,7 +315,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Paste the recruiter message, WhatsApp/Telegram text, or job posting description here..."
+<<<<<<< HEAD
                 className="w-full p-3.5 text-sm bg-[#FFFFFF] border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#1268E8] focus:ring-1 focus:ring-[#1268E8] transition-all font-sans leading-relaxed"
+=======
+                className="w-full p-3.5 text-sm bg-[#FFFFFF] border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#00A896] focus:ring-1 focus:ring-[#00A896] transition-all font-sans leading-relaxed"
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               />
             </div>
           )}
@@ -316,7 +342,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
                   value={inputUrl}
                   onChange={(e) => setInputUrl(e.target.value)}
                   placeholder="e.g. https://careers-company-jobs.com/apply or bit.ly link"
+<<<<<<< HEAD
                   className="w-full pl-9 pr-3.5 py-2.5 text-sm bg-[#FFFFFF] border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#1268E8] focus:ring-1 focus:ring-[#1268E8] transition-all font-sans"
+=======
+                  className="w-full pl-9 pr-3.5 py-2.5 text-sm bg-[#FFFFFF] border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#00A896] focus:ring-1 focus:ring-[#00A896] transition-all font-sans"
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 />
               </div>
             </div>
@@ -336,7 +366,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
           <button
             onClick={handleAnalyze}
             disabled={isAnalyzing}
+<<<<<<< HEAD
             className="w-full py-3.5 bg-[#1268E8] hover:bg-[#0B4DB3] disabled:opacity-60 text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#1268E8] focus:ring-offset-2 active:scale-[0.99]"
+=======
+            className="w-full py-3.5 bg-[#00A896] hover:bg-[#007F73] disabled:opacity-60 text-white font-bold text-sm rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#00A896] focus:ring-offset-2 active:scale-[0.99]"
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           >
             {isAnalyzing ? (
               <>
@@ -386,7 +420,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
 
               {analysisResult.flags.length === 0 ? (
                 <div className="card-soft p-6 border border-[#E6ECF3] rounded-2xl text-center space-y-2">
+<<<<<<< HEAD
                   <div className="w-10 h-10 rounded-full bg-[#1268E8]/10 text-[#1268E8] mx-auto flex items-center justify-center">
+=======
+                  <div className="w-10 h-10 rounded-full bg-[#2FB171]/10 text-[#2FB171] mx-auto flex items-center justify-center">
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                     <CheckCircle className="w-6 h-6" />
                   </div>
                   <h4 className="font-bold text-[#0B1F3A]">No obvious red flags found</h4>
@@ -444,7 +482,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
                   onClick={handleCopySummary}
                   className="flex items-center gap-1.5 px-4 py-2.5 bg-white border border-[#E6ECF3] hover:bg-[#F6F8FB] text-[#0B1F3A] text-xs font-semibold rounded-xl transition-all shadow-xs"
                 >
+<<<<<<< HEAD
                   {copySuccess ? <Check className="w-3.5 h-3.5 text-[#1268E8]" /> : <Copy className="w-3.5 h-3.5 text-[#8A94A6]" />}
+=======
+                  {copySuccess ? <Check className="w-3.5 h-3.5 text-[#2FB171]" /> : <Copy className="w-3.5 h-3.5 text-[#8A94A6]" />}
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   <span>{copySuccess ? 'Copied summary!' : 'Copy summary'}</span>
                 </button>
 
@@ -504,7 +546,11 @@ Disclaimer: ${analysisResult.disclaimer}`;
             },
           ].map((item, i) => (
             <div key={i} className="card-soft p-5 border border-[#E6ECF3] rounded-xl space-y-2">
+<<<<<<< HEAD
               <div className="text-xs font-mono font-bold text-[#1268E8]">{item.step}</div>
+=======
+              <div className="text-xs font-mono font-bold text-[#00A896]">{item.step}</div>
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               <h4 className="text-sm font-bold text-[#0B1F3A]">{item.title}</h4>
               <p className="text-xs text-[#5B6678] leading-relaxed">{item.desc}</p>
             </div>
@@ -553,24 +599,39 @@ Disclaimer: ${analysisResult.disclaimer}`;
           <div className="gallery-grid">
             {[
               {
+<<<<<<< HEAD
                 image: '/images/job%20search.jpg',
                 alt: 'Job opportunity highlighted in a newspaper',
+=======
+                image: '/images/student-opportunity.svg',
+                alt: 'Student comparing a job opportunity on a laptop',
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 number: '01',
                 title: 'Your first offer?',
                 text: 'Learn what a real hiring process should look—and feel—like.',
                 tag: 'JOB SEARCH BASICS',
               },
               {
+<<<<<<< HEAD
                 image: '/images/SCAM%20SPOTTING.jpg',
                 alt: 'Recruiter using a disguise while making a suspicious call',
+=======
+                image: '/images/message-warning.svg',
+                alt: 'Recruiter message with a suspicious fee request highlighted',
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 number: '02',
                 title: '“Just pay this fee…”',
                 text: 'Spot upfront payment demands and pressure tactics before you reply.',
                 tag: 'SCAM SPOTTING',
               },
               {
+<<<<<<< HEAD
                 image: '/images/SAFER%20NEXT%20STEPS.jpg',
                 alt: 'Recruitment details being checked against a verification list',
+=======
+                image: '/images/safe-search.svg',
+                alt: 'Shield and magnifier representing safe job-offer verification',
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 number: '03',
                 title: 'Your info, your rules',
                 text: 'Build the confidence to verify a recruiter and protect your details.',

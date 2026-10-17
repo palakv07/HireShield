@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="38" y1="24" x2="456" y2="326" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7F7F1"/>
+      <stop offset="1" stop-color="#E9E9FF"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="191" y1="156" x2="354" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102956"/>
+      <stop offset="1" stop-color="#176C83"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="340" rx="28" fill="url(#bg)"/>
+  <circle cx="426" cy="79" r="38" fill="#fff" fill-opacity=".56"/>
+  <circle cx="80" cy="252" r="52" fill="#fff" fill-opacity=".44"/>
+  <path d="M114 273c38-26 91-37 146-37s108 11 146 37v42H114v-42Z" fill="#C3EAE1"/>
+  <rect x="87" y="288" width="346" height="12" rx="6" fill="#A3D9D1"/>
+  <path d="M212 129c0-26 21-47 47-47s47 21 47 47v36h-94v-36Z" fill="#F3B78D"/>
+  <path d="M210 129c0-34 21-57 50-57 28 0 51 20 51 51-13-7-26-12-40-13-16 15-38 21-61 19v0Z" fill="#263759"/>
+  <path d="M190 222c0-40 31-71 69-71h2c39 0 70 31 70 71v40H190v-40Z" fill="#4B83D8"/>
+  <path d="m215 263 28-70h32l28 70H215Z" fill="#fff" fill-opacity=".24"/>
+  <rect x="151" y="220" width="218" height="83" rx="10" fill="url(#screen)"/>
+  <rect x="164" y="231" width="192" height="59" rx="5" fill="#F8FCFF"/>
+  <rect x="177" y="243" width="48" height="35" rx="5" fill="#D5F4EE"/>
+  <circle cx="201" cy="254" r="8" fill="#20A890"/>
+  <path d="M184 273c3-7 9-11 17-11s14 4 17 11" stroke="#20A890" stroke-width="4" stroke-linecap="round"/>
+  <rect x="236" y="245" width="104" height="6" rx="3" fill="#C9D6E4"/>
+  <rect x="236" y="257" width="83" height="5" rx="2.5" fill="#E0E8F0"/>
+  <rect x="236" y="268" width="97" height="5" rx="2.5" fill="#E0E8F0"/>
+  <path d="m140 303 18-12h204l18 12c2 2 1 6-3 6H143c-4 0-5-4-3-6Z" fill="#7094B8"/>
+  <rect x="372" y="112" width="94" height="56" rx="14" fill="#fff"/>
+  <circle cx="394" cy="140" r="11" fill="#DDF7EE"/>
+  <path d="m389 140 4 4 7-8" stroke="#169A7F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="412" y="134" width="39" height="5" rx="2.5" fill="#213858"/>
+  <rect x="412" y="144" width="28" height="4" rx="2" fill="#B5C3D0"/>
+</svg>

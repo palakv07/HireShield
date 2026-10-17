@@ -7,11 +7,19 @@
     --border-color: #E6ECF3;
     --text-navy: #0B1F3A;
     --text-slate: #5B6678;
+<<<<<<< HEAD
     --accent-blue: #1268E8;
     --accent-blue-hover: #0B4DB3;
     --risk-high: #E5484D;
     --risk-medium: #F5A524;
     --risk-low: #1268E8;
+=======
+    --accent-teal: #00A896;
+    --accent-teal-hover: #007F73;
+    --risk-high: #E5484D;
+    --risk-medium: #F5A524;
+    --risk-low: #2FB171;
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
     --risk-neutral: #8A94A6;
   }
 
@@ -33,7 +41,11 @@
 
   ::selection {
     color: #0B1F3A;
+<<<<<<< HEAD
     background: rgba(18, 104, 232, 0.2);
+=======
+    background: rgba(0, 168, 150, 0.2);
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
   }
 
   h1, h2, h3, h4, h5, h6 {

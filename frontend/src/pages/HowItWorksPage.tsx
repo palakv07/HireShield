@@ -6,7 +6,11 @@ export const HowItWorksPage: React.FC = () => {
     <div className="max-w-[880px] mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left">
+<<<<<<< HEAD
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1268E8]/10 text-[#1268E8] text-xs font-semibold border border-[#1268E8]/20">
+=======
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00A896]/10 text-[#00A896] text-xs font-semibold border border-[#00A896]/20">
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <Shield className="w-3.5 h-3.5" />
           <span>Transparency & Educational Purpose</span>
         </div>
@@ -49,24 +53,40 @@ export const HowItWorksPage: React.FC = () => {
       {/* Privacy Stance */}
       <div className="card-white p-6 sm:p-8 rounded-2xl border border-[#E6ECF3] space-y-4">
         <h2 className="text-xl font-bold text-[#0B1F3A] flex items-center gap-2">
+<<<<<<< HEAD
           <Lock className="w-5 h-5 text-[#1268E8]" />
+=======
+          <Lock className="w-5 h-5 text-[#00A896]" />
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <span>2. Our Privacy Stance: Zero Secret Storage</span>
         </h2>
         <div className="space-y-3 text-sm text-[#5B6678] leading-relaxed">
           <div className="flex items-start gap-3">
+<<<<<<< HEAD
             <CheckCircle className="w-4 h-4 text-[#1268E8] shrink-0 mt-1" />
+=======
+            <CheckCircle className="w-4 h-4 text-[#2FB171] shrink-0 mt-1" />
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <div>
               <strong className="text-[#0B1F3A]">Client-side Scanning & Masking:</strong> When text contains payment card numbers, OTPs, or government IDs, HireShield alerts the user immediately in the browser and offers one-click masking before transmission.
             </div>
           </div>
           <div className="flex items-start gap-3">
+<<<<<<< HEAD
             <CheckCircle className="w-4 h-4 text-[#1268E8] shrink-0 mt-1" />
+=======
+            <CheckCircle className="w-4 h-4 text-[#2FB171] shrink-0 mt-1" />
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <div>
               <strong className="text-[#0B1F3A]">Strict Server-Side Redaction:</strong> We never log raw user submission strings to disk or database. Only anonymized statistical metrics and redacted patterns are recorded.
             </div>
           </div>
           <div className="flex items-start gap-3">
+<<<<<<< HEAD
             <CheckCircle className="w-4 h-4 text-[#1268E8] shrink-0 mt-1" />
+=======
+            <CheckCircle className="w-4 h-4 text-[#2FB171] shrink-0 mt-1" />
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <div>
               <strong className="text-[#0B1F3A]">Zero Network Probing:</strong> HireShield does not make live outbound HTTP requests to user-submitted URLs, preventing tracking pixels, IP leakage, or alerting the sender.
             </div>

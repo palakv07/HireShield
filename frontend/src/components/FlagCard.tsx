@@ -31,11 +31,19 @@ export const FlagCard: React.FC<FlagCardProps> = ({ flag, index }) => {
         Icon: AlertCircle,
       }
     : {
+<<<<<<< HEAD
         badgeBg: '#EFF6FF',
         badgeBorder: '#BFDBFE',
         badgeText: '#1268E8',
         leftBorder: '#1268E8',
         evidenceBg: '#EFF6FF',
+=======
+        badgeBg: '#F0FDF4',
+        badgeBorder: '#BBF7D0',
+        badgeText: '#2FB171',
+        leftBorder: '#2FB171',
+        evidenceBg: '#F0FDF4',
+>>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
         Icon: Info,
       };
 
