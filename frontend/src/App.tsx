@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import './App.css';
 import { Navbar, type AppTab } from './components/Navbar';
 import { AnalyzerView } from './pages/AnalyzerView';
 import { ReportScamPage } from './pages/ReportScamPage';
 import { TrendsPage } from './pages/TrendsPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
 import { AuthPage } from './pages/AuthPage';
-import { Shield } from 'lucide-react';
+import { ArrowUpRight, BookOpen, HeartHandshake, Mail } from 'lucide-react';
+import { BrandMark } from './components/BrandMark';
 
 export const App: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<AppTab>('analyze');
@@ -22,8 +24,13 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleFooterNavigation = (tab: AppTab) => {
+    setCurrentTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-[#FFFFFF] flex flex-col font-sans text-[#5B6678]">
+    <div className="app-shell">
       {/* Top Navigation */}
       <Navbar
         currentTab={currentTab}
@@ -48,18 +55,36 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#E6ECF3] bg-[#F6F8FB]/50 py-8 px-4 sm:px-6 transition-colors">
-        <div className="max-w-[1120px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8A94A6]">
-          <div className="flex items-center gap-2 text-[#0B1F3A] font-semibold">
-            <div className="w-5 h-5 rounded-md bg-[#00A896]/10 flex items-center justify-center text-[#00A896]">
-              <Shield className="w-3.5 h-3.5" />
-            </div>
-            <span>HireShield</span>
+      <footer className="site-footer">
+        <div className="footer-main">
+          <div className="footer-brand-column">
+            <button
+              className="brand-button footer-brand"
+              onClick={() => handleFooterNavigation('analyze')}
+              aria-label="HireShield Home"
+            >
+              <BrandMark className="brand-mark-footer" />
+              <span className="brand-wordmark">Hire<span>Shield</span></span>
+            </button>
+            <p className="footer-intro">Your career is a big deal. Learn to spot sketchy offers, protect your information, and make your next move with confidence.</p>
+            <div className="footer-community"><HeartHandshake size={17} /> Built for the next generation of job seekers</div>
           </div>
-
-          <div className="text-center sm:text-right space-y-1">
-            <p>Early-warning educational tool. Never an endorsement or absolute verdict.</p>
+          <div className="footer-link-column">
+            <h2>Explore</h2>
+            <button onClick={() => handleFooterNavigation('analyze')}>Offer checker <ArrowUpRight size={14} /></button>
+            <button onClick={() => handleFooterNavigation('how-it-works')}>How it works <BookOpen size={14} /></button>
+            <button onClick={() => handleFooterNavigation('trends')}>Scam trends <ArrowUpRight size={14} /></button>
           </div>
+          <div className="footer-link-column">
+            <h2>Stay in the know</h2>
+            <p>Share suspicious job messages with the community to help other students stay safer.</p>
+            <button onClick={() => handleFooterNavigation('report')}>Report a suspicious offer <ArrowUpRight size={14} /></button>
+            <span className="footer-email"><Mail size={14} /> Free, friendly, and here to help.</span>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 HireShield · A safer start to your career.</span>
+          <span>Educational early warning only—not an endorsement or a verdict.</span>
         </div>
       </footer>
     </div>

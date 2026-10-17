@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, CheckCircle2, LockKeyhole, Mail, Shield, UserRound } from 'lucide-react';
+import { ArrowRight, CheckCircle2, LockKeyhole, Mail, UserRound } from 'lucide-react';
+import { BrandMark } from '../components/BrandMark';
 
 interface Account {
   id: string;
@@ -84,30 +85,29 @@ export const AuthPage: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 bg-[#F6F8FB] px-4 py-10 sm:px-6 sm:py-16">
-      <section className="mx-auto grid max-w-[900px] overflow-hidden rounded-3xl border border-[#E6ECF3] bg-white shadow-[0_20px_60px_rgba(11,31,58,0.08)] md:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative hidden flex-col justify-between overflow-hidden bg-[#0B1F3A] p-9 text-white md:flex">
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-white/10" />
-          <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full border border-white/10" />
-          <div className="relative">
-            <div className="mb-12 flex h-11 w-11 items-center justify-center rounded-xl bg-[#00A896]">
-              <Shield className="h-6 w-6" />
-            </div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#63D7C7]">Your job search, safer</p>
-            <h1 className="text-3xl font-bold leading-tight text-white">Make every opportunity a little more secure.</h1>
-            <p className="mt-4 text-sm leading-6 text-white/70">
-              Sign in to keep your HireShield account close while you check suspicious job offers.
-            </p>
+    <div className="auth-page">
+      <section className="auth-card">
+        <div className="auth-story-panel">
+          <div className="auth-story-brand">
+            <BrandMark className="auth-brand-mark" />
+            <span>Hire<span>Shield</span></span>
           </div>
-          <div className="relative flex items-center gap-2 text-xs text-white/60">
-            <LockKeyhole className="h-4 w-4 text-[#63D7C7]" />
+          <div className="auth-story-copy">
+            <p className="auth-kicker">Your next chapter starts here</p>
+            <h1>A little more confidence. A lot more career.</h1>
+            <p>Build smart job-search habits, check suspicious offers, and keep your personal details yours.</p>
+          </div>
+          <img className="auth-illustration" src="/images/student-opportunity.svg" alt="A student exploring a job opportunity safely on a laptop" />
+          <div className="auth-story-note">
+            <LockKeyhole size={16} />
             Your password is stored as a secure hash.
           </div>
         </div>
 
-        <div className="p-6 sm:p-10">
-          <div className="mb-8 flex items-center gap-2 text-sm font-semibold text-[#00A896] md:hidden">
-            <Shield className="h-5 w-5" /> HireShield account
+        <div className="auth-form-panel">
+          <div className="auth-mobile-brand">
+            <BrandMark className="auth-brand-mark" />
+            <span>Hire<span>Shield</span></span>
           </div>
 
           {account ? (

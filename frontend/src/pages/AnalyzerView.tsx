@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   ShieldAlert,
   Search,
+  ArrowUpRight,
   Link as LinkIcon,
   FileText,
   AlertOctagon,
@@ -122,30 +123,65 @@ Disclaimer: ${analysisResult.disclaimer}`;
   };
 
   return (
-    <div className="max-w-[1120px] mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
-      {/* Hero Section */}
-      <div className="text-center max-w-2xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00A896]/10 text-[#00A896] text-xs font-semibold border border-[#00A896]/20">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Explainable Recruitment Fraud Early Warning</span>
+    <div className="page-wrap analyzer-page">
+      <section className="hero-section">
+        <div className="hero-copy">
+          <div className="eyebrow-pill"><Sparkles size={15} /> Your job search sidekick</div>
+          <h1>Big career energy.<br /><span>Scam-proof instincts.</span></h1>
+          <p className="hero-description">
+            Your first job should be exciting—not sketchy. Check recruiter messages and job offers, learn the red flags, and make your next move with confidence.
+          </p>
+          <div className="hero-actions">
+            <a className="primary-button hero-cta" href="#offer-checker">
+              Check an offer <Search size={17} />
+            </a>
+            <span className="hero-note"><Lock size={14} /> Free to use. Your search stays yours.</span>
+          </div>
+          <div className="hero-stats">
+            <div><strong>10+</strong><span>red flags to spot</span></div>
+            <i />
+            <div><strong>5 steps</strong><span>to verify an offer</span></div>
+            <i />
+            <div><strong>100%</strong><span>on your side</span></div>
+          </div>
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B1F3A] tracking-tight leading-tight">
-          Spot recruitment fraud before it costs you.
-        </h1>
-        <p className="text-base sm:text-lg text-[#5B6678] leading-relaxed">
-          Paste an email, recruiter DM, or career URL. Get an instant, transparent breakdown of red flags, missing signals, and safe next steps.
-        </p>
+        <div className="hero-visual">
+          <img src="/images/student-opportunity.svg" alt="A student exploring a job opportunity safely on a laptop" />
+          <div className="hero-visual-label"><span className="live-dot" /> Your career, your call</div>
+          <div className="hero-float-card hero-level-card">
+            <span className="level-icon"><Sparkles size={16} /></span>
+            <span><small>SCAM RADAR</small><strong>Level 1 · Offer Scout</strong></span>
+            <span className="level-arrow">↗</span>
+          </div>
+          <div className="hero-float-card hero-safe-card">
+            <span className="safe-check"><Check size={15} /></span>
+            <span><strong>Smart move!</strong><small>Check before you click</small></span>
+          </div>
+        </div>
+      </section>
+
+      <div className="trust-strip" aria-label="How HireShield helps">
+        <span className="trust-strip-label">A smarter way to job hunt</span>
+        <span><ShieldAlert size={17} /> Spot the red flags</span>
+        <span><Lock size={17} /> Keep your info private</span>
+        <span><CheckCircle size={17} /> Make your next move</span>
       </div>
 
       {/* Main Analyzer Card */}
-      <div className="card-white p-5 sm:p-8 rounded-2xl border border-[#E6ECF3] shadow-sm max-w-3xl mx-auto space-y-6">
-        {/* Persistent Inline Safety Banner */}
-        <div className="flex items-start gap-3 p-3.5 bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl text-xs text-[#5B6678]">
+      <section id="offer-checker" className="analyzer-section">
+        <div className="section-heading">
+          <span className="section-step">YOUR FIRST POWER MOVE</span>
+          <h2>Does this offer pass the vibe check?</h2>
+          <p>Drop in a job post or recruiter message. We’ll help you figure out what to look for.</p>
+        </div>
+        <div className="card-white analyzer-card rounded-2xl border border-[#E6ECF3] shadow-sm mx-auto space-y-6">
+          {/* Persistent Inline Safety Banner */}
+          <div className="flex items-start gap-3 p-3.5 bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl text-xs text-[#5B6678]">
           <Lock className="w-4 h-4 text-[#8A94A6] shrink-0 mt-0.5" />
           <div>
             <strong className="text-[#0B1F3A]">Data Safety Notice:</strong> Never paste passwords, OTPs, government IDs, or payment details. HireShield analyzes text heuristics offline and never stores unredacted text.
           </div>
-        </div>
+          </div>
 
         {/* Client-side PII Warning Banner if detected */}
         {sensitiveFindings.length > 0 && (
@@ -312,6 +348,7 @@ Disclaimer: ${analysisResult.disclaimer}`;
           </button>
         </div>
       </div>
+      </section>
 
       {/* Results View Section */}
       <AnimatePresence>
@@ -497,7 +534,59 @@ Disclaimer: ${analysisResult.disclaimer}`;
             </span>
           ))}
         </div>
+
       </div>
+
+      <section className="gallery-section" aria-labelledby="gallery-heading">
+          <div className="gallery-heading">
+            <div>
+              <span className="section-step">THE STUDENT SURVIVAL KIT</span>
+              <h2 id="gallery-heading">Real-world red flags. Real-life confidence.</h2>
+              <p>Get to know the tricks scammers use—and the smart moves that keep your career on track.</p>
+            </div>
+            <a href="#offer-checker" className="text-link">Practice with an example <ArrowUpRight size={15} /></a>
+          </div>
+          <div className="gallery-grid">
+            {[
+              {
+                image: '/images/student-opportunity.svg',
+                alt: 'Student comparing a job opportunity on a laptop',
+                number: '01',
+                title: 'Your first offer?',
+                text: 'Learn what a real hiring process should look—and feel—like.',
+                tag: 'JOB SEARCH BASICS',
+              },
+              {
+                image: '/images/message-warning.svg',
+                alt: 'Recruiter message with a suspicious fee request highlighted',
+                number: '02',
+                title: '“Just pay this fee…”',
+                text: 'Spot upfront payment demands and pressure tactics before you reply.',
+                tag: 'SCAM SPOTTING',
+              },
+              {
+                image: '/images/safe-search.svg',
+                alt: 'Shield and magnifier representing safe job-offer verification',
+                number: '03',
+                title: 'Your info, your rules',
+                text: 'Build the confidence to verify a recruiter and protect your details.',
+                tag: 'SAFER NEXT STEPS',
+              },
+            ].map((item) => (
+              <article className="gallery-card" key={item.number}>
+                <div className="gallery-image-wrap">
+                  <img src={item.image} alt={item.alt} loading="lazy" />
+                  <span className="gallery-number">{item.number}</span>
+                </div>
+                <div className="gallery-card-copy">
+                  <span className="gallery-tag">{item.tag}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+      </section>
     </div>
   );
 };

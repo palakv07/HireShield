@@ -30,7 +30,13 @@ describe('AnalyzerView Component', () => {
     render(<AnalyzerView onOpenReportModal={dummyReport} />);
 
     expect(
-      screen.getByText(/Spot recruitment fraud before it costs you/i)
+      screen.getByRole('heading', { name: /Big career energy/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /Real-world red flags/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('img', { name: /suspicious fee request/i })
     ).toBeInTheDocument();
 
     expect(

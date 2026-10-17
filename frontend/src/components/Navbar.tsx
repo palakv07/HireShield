@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Shield, ShieldAlert, BarChart3, HelpCircle, Menu, X, ArrowUpRight } from 'lucide-react';
+import { BrandMark } from './BrandMark';
 
 export type AppTab = 'analyze' | 'how-it-works' | 'report' | 'trends' | 'auth';
 
@@ -26,26 +27,26 @@ export const Navbar: React.FC<NavbarProps> = ({
   const handleNavClick = (tabId: AppTab) => {
     onTabChange(tabId);
     setMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-[#E6ECF3] transition-colors">
-      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Brand Logo */}
+    <header className="site-header">
+      <div className="site-header-inner">
         <button
           onClick={() => handleNavClick('analyze')}
-          className="flex items-center gap-2.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A896] rounded-lg p-1"
+          className="brand-button"
           aria-label="HireShield Home"
         >
-          <div>
-            <span className="text-[19px] font-bold tracking-tight text-[#0B1F3A] flex items-center gap-1.5">
-              HireShield
-            </span>
-          </div>
+          <BrandMark className="brand-mark-header" />
+          <span className="brand-wordmark">
+            Hire<span>Shield</span>
+            <small>CAREER SAFETY, LEVELLED UP</small>
+          </span>
         </button>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+        <nav className="desktop-navigation" aria-label="Main Navigation">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = currentTab === item.id;
@@ -53,14 +54,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-all ${
-                  isActive
-                    ? 'text-[#0B1F3A] bg-[#F6F8FB] font-semibold'
-                    : 'text-[#5B6678] hover:text-[#0B1F3A] hover:bg-[#F6F8FB]/60'
-                }`}
+                className={`navigation-link${isActive ? ' is-active' : ''}`}
                 aria-current={isActive ? 'page' : undefined}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#00A896]' : 'text-[#8A94A6]'}`} />
+                <Icon className="navigation-icon" />
                 {item.label}
               </button>
             );
@@ -68,18 +65,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right CTA */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="desktop-actions">
           <button
             onClick={() => handleNavClick('auth')}
-            className={`px-3 py-2 text-sm font-semibold transition-colors ${
-              currentTab === 'auth' ? 'text-[#00A896]' : 'text-[#5B6678] hover:text-[#0B1F3A]'
-            }`}
+            className={`sign-in-link${currentTab === 'auth' ? ' is-active' : ''}`}
           >
             Sign in
           </button>
           <button
             onClick={onCheckOfferClick}
-            className="flex items-center gap-1.5 px-4 py-2 bg-[#00A896] hover:bg-[#007F73] text-white text-sm font-semibold rounded-lg shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A896] focus-visible:ring-offset-2 active:scale-[0.98]"
+            className="primary-button nav-cta"
           >
             <span>Check an offer</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -89,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#5B6678] hover:text-[#0B1F3A] hover:bg-[#F6F8FB] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A896]"
+          className="mobile-menu-toggle"
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
         >
@@ -99,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-[#E6ECF3] bg-white px-4 pt-2 pb-4 space-y-1 shadow-md">
+        <div className="mobile-navigation">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = currentTab === item.id;
@@ -107,20 +102,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`w-full flex items-center gap-2.5 px-3 py-2.5 text-sm font-medium rounded-lg ${
-                  isActive
-                    ? 'text-[#0B1F3A] bg-[#F6F8FB] font-semibold'
-                    : 'text-[#5B6678] hover:bg-[#F6F8FB]'
-                }`}
+                className={`mobile-navigation-link${isActive ? ' is-active' : ''}`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#00A896]' : 'text-[#8A94A6]'}`} />
+                <Icon className="navigation-icon" />
                 {item.label}
               </button>
             );
           })}
           <button
             onClick={() => handleNavClick('auth')}
-            className="w-full rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-[#0B1F3A] hover:bg-[#F6F8FB]"
+            className="mobile-navigation-link"
           >
             Sign in
           </button>
@@ -130,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onCheckOfferClick();
                 setMobileMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 bg-[#00A896] text-white text-sm font-semibold rounded-lg"
+              className="primary-button mobile-cta"
             >
               Check an offer
             </button>

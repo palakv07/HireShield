@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    --bg-main: #FFFFFF;
+    --bg-main: #F8FAFC;
     --bg-card: #F6F8FB;
     --border-color: #E6ECF3;
     --text-navy: #0B1F3A;
@@ -16,11 +16,24 @@
   }
 
   body {
-    background-color: #FFFFFF;
+    background-color: #F8FAFC;
     color: #5B6678;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, input, textarea, select {
+    font: inherit;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    color: #0B1F3A;
+    background: rgba(0, 168, 150, 0.2);
   }
 
   h1, h2, h3, h4, h5, h6 {
