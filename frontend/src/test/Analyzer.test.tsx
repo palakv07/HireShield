@@ -27,11 +27,7 @@ describe('HireShield Client Masking Utility', () => {
 describe('AnalyzerView Component', () => {
   it('renders the hero headline and analyzer inputs', () => {
     const dummyReport = vi.fn();
-<<<<<<< HEAD
     const { container } = render(<AnalyzerView onOpenReportModal={dummyReport} />);
-=======
-    render(<AnalyzerView onOpenReportModal={dummyReport} />);
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 
     expect(
       screen.getByRole('heading', { name: /Big career energy/i })
@@ -39,7 +35,6 @@ describe('AnalyzerView Component', () => {
     expect(
       screen.getByRole('heading', { name: /Real-world red flags/i })
     ).toBeInTheDocument();
-<<<<<<< HEAD
     expect(container.querySelector('.hero-image')).toHaveAttribute('src', '/images/homepage.jpg');
     expect(container.querySelectorAll('.gallery-image-wrap img')).toHaveLength(3);
     expect(screen.getByAltText(/job opportunity highlighted/i)).toHaveAttribute(
@@ -54,11 +49,6 @@ describe('AnalyzerView Component', () => {
       'src',
       '/images/SAFER%20NEXT%20STEPS.jpg'
     );
-=======
-    expect(
-      screen.getByRole('img', { name: /suspicious fee request/i })
-    ).toBeInTheDocument();
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 
     expect(
       screen.getByPlaceholderText(/Paste the recruiter message/i)

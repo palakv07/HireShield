@@ -105,10 +105,33 @@ This workflow publishes a **static frontend only**. GitHub Pages and GitHub Acti
 
 ---
 
-<<<<<<< HEAD
 ## Full-stack Docker Deployment
 
 The Docker deployment runs the built React frontend and FastAPI backend together in the app container. Caddy sits in front as a reverse proxy and automatically provisions/renews HTTPS certificates. The app and database are not exposed directly to the internet; only ports 80 and 443 are published.
+
+### Deploy with Render Web Service (Docker)
+
+Use one Render **Web Service** for this project. The Docker image builds the frontend and serves it from FastAPI alongside the `/api` endpoints, so do not create a separate static-site service for the frontend.
+
+1. Push the project to a GitHub repository and connect that repository to Render.
+2. In the Render dashboard, select **New → Web Service**, choose the repository and deployment branch, and set:
+   - **Runtime:** Docker
+   - **Root Directory:** `.`
+   - **Dockerfile Path:** `./Dockerfile`
+   - **Docker Build Context Directory:** `.`
+3. Add these environment variables in the service's **Environment** settings:
+   - `DATABASE_URL` = `sqlite:////data/hireshield.db`
+   - `AI_ENABLED` = `false`
+
+   Render supplies `PORT` automatically. The Dockerfile uses that port when it starts Uvicorn; leave the service's Docker start command unset.
+4. For persistent accounts, reports, and feedback, add a Render persistent disk to the service with mount path `/data`. Choose a plan that supports persistent disks. The `DATABASE_URL` above places the SQLite database on that disk. Without a persistent disk (or another persistent database), data written to the container filesystem can be lost when Render replaces the instance.
+5. Optionally set the service health-check path to `/api/health`.
+6. Create the service and wait for the Docker build and deployment to finish. Open the Render-provided HTTPS URL. Confirm the UI loads and visit `https://YOUR-RENDER-URL/api/health` to check the backend.
+7. To deploy updates, push commits to the connected branch. Render rebuilds and redeploys the Docker image. The mounted `/data` disk remains attached across deploys.
+
+Check the Render **Logs** tab if the build or startup fails. A frontend TypeScript/build failure appears during the Docker build; API startup and health-check issues appear in service logs. Do not set `DATABASE_URL` to the default relative SQLite path for a persistent deployment.
+
+The `docker-compose.yml` and `Caddyfile` below are for running the same Docker image on a self-managed server; they are not needed for a Render Web Service.
 
 ### Requirements
 
@@ -200,8 +223,6 @@ Open `http://localhost` (Caddy will not issue a public TLS certificate for `loca
 
 ---
 
-=======
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 ##  Testing & Benchmark Evaluation
 
 ### Run All Tests (Backend + Frontend)

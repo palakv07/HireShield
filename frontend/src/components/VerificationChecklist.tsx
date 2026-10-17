@@ -23,11 +23,7 @@ export const VerificationChecklist: React.FC<VerificationChecklistProps> = ({ it
     <div className="card-white p-6 border border-[#E6ECF3] rounded-2xl">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
         <div className="flex items-center gap-2.5">
-<<<<<<< HEAD
           <div className="w-8 h-8 rounded-lg bg-[#1268E8]/10 flex items-center justify-center text-[#1268E8]">
-=======
-          <div className="w-8 h-8 rounded-lg bg-[#00A896]/10 flex items-center justify-center text-[#00A896]">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
@@ -47,11 +43,7 @@ export const VerificationChecklist: React.FC<VerificationChecklistProps> = ({ it
           </span>
           <div className="w-16 h-2 bg-[#E6ECF3] rounded-full overflow-hidden">
             <div
-<<<<<<< HEAD
               className="h-full bg-[#1268E8] transition-all duration-300"
-=======
-              className="h-full bg-[#00A896] transition-all duration-300"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               style={{ width: `${progressPct}%` }}
             />
           </div>
@@ -67,29 +59,17 @@ export const VerificationChecklist: React.FC<VerificationChecklistProps> = ({ it
               onClick={() => toggleItem(idx)}
               className={`flex items-start gap-3 p-3 rounded-xl border transition-all cursor-pointer select-none ${
                 isChecked
-<<<<<<< HEAD
                   ? 'bg-[#EFF6FF] border-[#BFDBFE] text-[#0B1F3A]'
-=======
-                  ? 'bg-[#F0FDF4] border-[#BBF7D0] text-[#0B1F3A]'
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   : 'bg-[#F6F8FB]/60 border-[#E6ECF3] text-[#5B6678] hover:bg-[#F6F8FB]'
               }`}
             >
               <button
                 type="button"
-<<<<<<< HEAD
                 className="mt-0.5 text-[#1268E8] focus:outline-none"
                 aria-label={`Toggle check for: ${item}`}
               >
                 {isChecked ? (
                   <CheckSquare className="w-4 h-4 text-[#1268E8]" />
-=======
-                className="mt-0.5 text-[#00A896] focus:outline-none"
-                aria-label={`Toggle check for: ${item}`}
-              >
-                {isChecked ? (
-                  <CheckSquare className="w-4 h-4 text-[#00A896]" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 ) : (
                   <Square className="w-4 h-4 text-[#8A94A6]" />
                 )}

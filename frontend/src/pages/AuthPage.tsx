@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle2, LockKeyhole, Mail, ShieldCheck, UserRound } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle2, LockKeyhole, Mail, UserRound } from 'lucide-react';
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 import { BrandMark } from '../components/BrandMark';
 
 interface Account {
@@ -101,7 +97,6 @@ export const AuthPage: React.FC = () => {
             <h1>A little more confidence. A lot more career.</h1>
             <p>Build smart job-search habits, check suspicious offers, and keep your personal details yours.</p>
           </div>
-<<<<<<< HEAD
           <div className="auth-trust-card">
             <ShieldCheck size={28} aria-hidden="true" />
             <span>
@@ -109,9 +104,6 @@ export const AuthPage: React.FC = () => {
               Check the details before you share, click, or reply.
             </span>
           </div>
-=======
-          <img className="auth-illustration" src="/images/student-opportunity.svg" alt="A student exploring a job opportunity safely on a laptop" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <div className="auth-story-note">
             <LockKeyhole size={16} />
             Your password is stored as a secure hash.
@@ -126,17 +118,10 @@ export const AuthPage: React.FC = () => {
 
           {account ? (
             <div className="py-8">
-<<<<<<< HEAD
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#1268E8]/10 text-[#1268E8]">
                 <CheckCircle2 className="h-6 w-6" />
               </div>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#1268E8]">Signed in</p>
-=======
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#00A896]/10 text-[#00A896]">
-                <CheckCircle2 className="h-6 w-6" />
-              </div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#00A896]">Signed in</p>
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               <h2 className="mt-2 text-2xl font-bold text-[#0B1F3A]">Welcome, {account.name}</h2>
               <p className="mt-2 text-sm text-[#5B6678]">{account.email}</p>
               <button
@@ -149,11 +134,7 @@ export const AuthPage: React.FC = () => {
             </div>
           ) : (
             <>
-<<<<<<< HEAD
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#1268E8]">Welcome to HireShield</p>
-=======
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#00A896]">Welcome to HireShield</p>
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               <h2 className="mt-2 text-2xl font-bold text-[#0B1F3A]">
                 {mode === 'login' ? 'Sign in to your account' : 'Create your account'}
               </h2>
@@ -181,11 +162,7 @@ export const AuthPage: React.FC = () => {
               </div>
 
               {message && (
-<<<<<<< HEAD
                 <p role="status" className="mt-5 rounded-xl border border-[#BFDBFE] bg-[#EFF6FF] px-3.5 py-3 text-sm text-[#0B4DB3]">
-=======
-                <p role="status" className="mt-5 rounded-xl border border-[#BBF7D0] bg-[#F0FDF4] px-3.5 py-3 text-sm text-[#18804A]">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   {message}
                 </p>
               )}
@@ -210,11 +187,7 @@ export const AuthPage: React.FC = () => {
                         value={name}
                         onChange={(event) => setName(event.target.value)}
                         placeholder="Your name"
-<<<<<<< HEAD
                         className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#1268E8] focus:ring-2 focus:ring-[#1268E8]/10"
-=======
-                        className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#00A896] focus:ring-2 focus:ring-[#00A896]/10"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                       />
                     </span>
                   </label>
@@ -232,11 +205,7 @@ export const AuthPage: React.FC = () => {
                       value={email}
                       onChange={(event) => setEmail(event.target.value)}
                       placeholder="you@example.com"
-<<<<<<< HEAD
                       className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#1268E8] focus:ring-2 focus:ring-[#1268E8]/10"
-=======
-                      className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#00A896] focus:ring-2 focus:ring-[#00A896]/10"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                     />
                   </span>
                 </label>
@@ -254,22 +223,14 @@ export const AuthPage: React.FC = () => {
                       value={password}
                       onChange={(event) => setPassword(event.target.value)}
                       placeholder={mode === 'register' ? 'At least 8 characters' : 'Enter your password'}
-<<<<<<< HEAD
                       className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#1268E8] focus:ring-2 focus:ring-[#1268E8]/10"
-=======
-                      className="w-full rounded-xl border border-[#E6ECF3] bg-white py-3 pl-10 pr-3.5 text-sm text-[#0B1F3A] outline-none transition placeholder:text-[#AAB2BF] focus:border-[#00A896] focus:ring-2 focus:ring-[#00A896]/10"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                     />
                   </span>
                 </label>
                 <button
                   type="submit"
                   disabled={submitting || busy}
-<<<<<<< HEAD
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1268E8] px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#0B4DB3] disabled:cursor-not-allowed disabled:opacity-60"
-=======
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#00A896] px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#007F73] disabled:cursor-not-allowed disabled:opacity-60"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                 >
                   {submitting ? 'Please wait…' : mode === 'login' ? 'Sign in' : 'Create account'}
                   {!submitting && <ArrowRight className="h-4 w-4" />}

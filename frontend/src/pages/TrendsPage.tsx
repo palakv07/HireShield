@@ -41,22 +41,14 @@ export const TrendsPage: React.FC = () => {
     fetchTrends();
   }, []);
 
-<<<<<<< HEAD
   const COLORS = ['#E5484D', '#F5A524', '#1268E8', '#3B82F6', '#8A94A6'];
-=======
-  const COLORS = ['#E5484D', '#F5A524', '#00A896', '#3B82F6', '#8A94A6'];
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 
   return (
     <div className="max-w-[1120px] mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-<<<<<<< HEAD
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1268E8]/10 text-[#1268E8] text-xs font-semibold border border-[#1268E8]/20 mb-2">
-=======
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00A896]/10 text-[#00A896] text-xs font-semibold border border-[#00A896]/20 mb-2">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <BarChart3 className="w-3.5 h-3.5" />
             <span>Community Intelligence & Benchmark</span>
           </div>
@@ -70,11 +62,7 @@ export const TrendsPage: React.FC = () => {
 
         <div className="flex items-center gap-2">
           <span className="text-xs text-[#8A94A6] bg-[#F6F8FB] border border-[#E6ECF3] px-3 py-1.5 rounded-lg flex items-center gap-1.5">
-<<<<<<< HEAD
             <Database className="w-3.5 h-3.5 text-[#1268E8]" />
-=======
-            <Database className="w-3.5 h-3.5 text-[#00A896]" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             <span>Demo Baseline Data Included</span>
           </span>
           <button
@@ -89,11 +77,7 @@ export const TrendsPage: React.FC = () => {
 
       {loading && !trends ? (
         <div className="card-white p-12 text-center space-y-3">
-<<<<<<< HEAD
           <div className="w-6 h-6 border-2 border-[#1268E8] border-t-transparent rounded-full animate-spin mx-auto" />
-=======
-          <div className="w-6 h-6 border-2 border-[#00A896] border-t-transparent rounded-full animate-spin mx-auto" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <p className="text-xs text-[#5B6678]">Loading real-time trends...</p>
         </div>
       ) : error ? (
@@ -106,11 +90,7 @@ export const TrendsPage: React.FC = () => {
           <div className="card-white p-6 sm:p-8 rounded-2xl border border-[#E6ECF3] space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#E6ECF3] pb-4">
               <div>
-<<<<<<< HEAD
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#1268E8]">
-=======
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#00A896]">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   Rigorous Verification
                 </span>
                 <h3 className="text-lg font-bold text-[#0B1F3A] mt-0.5">
@@ -125,13 +105,8 @@ export const TrendsPage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
               <div className="card-soft p-4 rounded-xl border border-[#E6ECF3] space-y-1">
                 <span className="text-xs text-[#5B6678] font-medium">Planted Scam Detection</span>
-<<<<<<< HEAD
                 <div className="text-2xl font-extrabold text-[#1268E8] flex items-center gap-1.5">
                   <CheckCircle className="w-5 h-5 text-[#1268E8]" />
-=======
-                <div className="text-2xl font-extrabold text-[#2FB171] flex items-center gap-1.5">
-                  <CheckCircle className="w-5 h-5 text-[#2FB171]" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   <span>{trends.benchmark_metrics.detection_rate}%</span>
                 </div>
                 <p className="text-[11px] text-[#8A94A6]">
@@ -161,11 +136,7 @@ export const TrendsPage: React.FC = () => {
 
               <div className="card-soft p-4 rounded-xl border border-[#E6ECF3] space-y-1">
                 <span className="text-xs text-[#5B6678] font-medium">Community Reports</span>
-<<<<<<< HEAD
                 <div className="text-2xl font-extrabold text-[#1268E8]">
-=======
-                <div className="text-2xl font-extrabold text-[#00A896]">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   {trends.total_reports}
                 </div>
                 <p className="text-[11px] text-[#8A94A6]">
@@ -242,11 +213,7 @@ export const TrendsPage: React.FC = () => {
                         boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)',
                       }}
                     />
-<<<<<<< HEAD
                     <Bar dataKey="count" fill="#1268E8" radius={[6, 6, 0, 0]} />
-=======
-                    <Bar dataKey="count" fill="#00A896" radius={[6, 6, 0, 0]} />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
                   </BarChart>
                 </ResponsiveContainer>
               </div>

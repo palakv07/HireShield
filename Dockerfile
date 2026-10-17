@@ -1,3 +1,4 @@
+
 FROM node:24-alpine AS frontend-build
 
 WORKDIR /app
@@ -14,23 +15,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 COPY backend/requirements.txt ./backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
-<<<<<<< HEAD
+
 RUN addgroup --system hireshield \
     && adduser --system --ingroup hireshield hireshield \
     && mkdir -p /data \
     && chown -R hireshield:hireshield /app/backend /data
 
 COPY --chown=hireshield:hireshield backend ./backend
-=======
-COPY backend ./backend
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 COPY --from=frontend-build /app/frontend/dist ./frontend/dist
 
 WORKDIR /app/backend
 EXPOSE 8000
-<<<<<<< HEAD
+
 USER hireshield
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]
-=======
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips '*'"]

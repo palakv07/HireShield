@@ -96,11 +96,7 @@ export const HighlightedText: React.FC<HighlightedTextProps> = ({ text, flags })
             ? 'bg-[#E5484D]/15 text-[#0B1F3A] border-b-2 border-[#E5484D] font-medium'
             : isMed
             ? 'bg-[#F5A524]/20 text-[#0B1F3A] border-b-2 border-[#F5A524] font-medium'
-<<<<<<< HEAD
             : 'bg-[#1268E8]/15 text-[#0B1F3A] border-b-2 border-[#1268E8] font-medium';
-=======
-            : 'bg-[#2FB171]/15 text-[#0B1F3A] border-b-2 border-[#2FB171] font-medium';
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
 
           return (
             <span

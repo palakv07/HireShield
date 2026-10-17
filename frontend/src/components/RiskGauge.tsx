@@ -37,15 +37,9 @@ export const RiskGauge: React.FC<RiskGaugeProps> = ({
       description: 'Contains warning patterns requiring thorough independent verification.',
     },
     LOW: {
-<<<<<<< HEAD
       color: '#1268E8',
       bgLight: '#EFF6FF',
       border: '#BFDBFE',
-=======
-      color: '#2FB171',
-      bgLight: '#F0FDF4',
-      border: '#BBF7D0',
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
       label: 'LOW RISK',
       badgeText: 'Low Risk Indicators',
       Icon: CheckCircle2,

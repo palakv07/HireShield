@@ -67,11 +67,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
   if (reportId) {
     return (
       <div className="max-w-[720px] mx-auto px-4 py-16 text-center space-y-6">
-<<<<<<< HEAD
         <div className="w-16 h-16 rounded-full bg-[#1268E8]/10 text-[#1268E8] mx-auto flex items-center justify-center border border-[#1268E8]/20">
-=======
-        <div className="w-16 h-16 rounded-full bg-[#00A896]/10 text-[#00A896] mx-auto flex items-center justify-center border border-[#00A896]/20">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B1F3A]">
@@ -85,22 +81,14 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
           Reference ID: <span className="font-mono text-[#0B1F3A]">{reportId}</span>
         </div>
 
-<<<<<<< HEAD
         <div className="p-4 bg-[#EFF6FF] border border-[#BFDBFE] rounded-xl text-xs text-[#1268E8] max-w-md mx-auto">
-=======
-        <div className="p-4 bg-[#F0FDF4] border border-[#BBF7D0] rounded-xl text-xs text-[#2FB171] max-w-md mx-auto">
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           <strong>Reminder:</strong> If money or banking information was already shared, contact your financial institution and local cybersecurity reporting authority immediately.
         </div>
 
         <div className="pt-4">
           <button
             onClick={onBackToAnalyzer}
-<<<<<<< HEAD
             className="px-6 py-2.5 bg-[#1268E8] hover:bg-[#0B4DB3] text-white text-sm font-semibold rounded-xl shadow-xs"
-=======
-            className="px-6 py-2.5 bg-[#00A896] hover:bg-[#007F73] text-white text-sm font-semibold rounded-xl shadow-xs"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           >
             Back to Analyzer
           </button>
@@ -145,11 +133,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
             <select
               value={scamType}
               onChange={(e) => setScamType(e.target.value)}
-<<<<<<< HEAD
               className="w-full text-sm bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl px-3.5 py-2.5 text-[#0B1F3A] focus:outline-none focus:border-[#1268E8]"
-=======
-              className="w-full text-sm bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl px-3.5 py-2.5 text-[#0B1F3A] focus:outline-none focus:border-[#00A896]"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             >
               <option value="fee">Upfront Fee / Deposit Demand</option>
               <option value="phishing_link">Phishing Link / Malicious Site</option>
@@ -167,11 +151,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
             <select
               value={platform}
               onChange={(e) => setPlatform(e.target.value)}
-<<<<<<< HEAD
               className="w-full text-sm bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl px-3.5 py-2.5 text-[#0B1F3A] focus:outline-none focus:border-[#1268E8]"
-=======
-              className="w-full text-sm bg-[#F6F8FB] border border-[#E6ECF3] rounded-xl px-3.5 py-2.5 text-[#0B1F3A] focus:outline-none focus:border-[#00A896]"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             >
               <option value="LinkedIn">LinkedIn</option>
               <option value="WhatsApp">WhatsApp</option>
@@ -192,11 +172,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
             value={rawText}
             onChange={(e) => setRawText(e.target.value)}
             placeholder="Paste the suspicious message, job details, or pitch..."
-<<<<<<< HEAD
             className="w-full p-3.5 text-sm bg-white border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#1268E8]"
-=======
-            className="w-full p-3.5 text-sm bg-white border border-[#E6ECF3] rounded-xl text-[#0B1F3A] placeholder-[#8A94A6] focus:outline-none focus:border-[#00A896]"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
           />
         </div>
 
@@ -204,11 +180,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
         <div className="card-soft p-4 rounded-xl border border-[#E6ECF3] space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5 text-xs font-bold text-[#0B1F3A]">
-<<<<<<< HEAD
               <Eye className="w-4 h-4 text-[#1268E8]" />
-=======
-              <Eye className="w-4 h-4 text-[#00A896]" />
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
               <span>Redacted Preview (What will actually be logged)</span>
             </div>
             <span className="text-[11px] text-[#8A94A6] flex items-center gap-1">
@@ -226,11 +198,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
               type="checkbox"
               checked={confirmedPreview}
               onChange={(e) => setConfirmedPreview(e.target.checked)}
-<<<<<<< HEAD
               className="mt-0.5 rounded text-[#1268E8] focus:ring-[#1268E8]"
-=======
-              className="mt-0.5 rounded text-[#00A896] focus:ring-[#00A896]"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
             />
             <span className="text-xs text-[#0B1F3A] font-medium leading-relaxed">
               I have inspected the redacted preview and confirm it does not contain private passwords or personal secrets.
@@ -247,11 +215,7 @@ export const ReportScamPage: React.FC<ReportScamPageProps> = ({
         <button
           type="submit"
           disabled={submitting}
-<<<<<<< HEAD
           className="w-full py-3 bg-[#1268E8] hover:bg-[#0B4DB3] disabled:opacity-60 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
-=======
-          className="w-full py-3 bg-[#00A896] hover:bg-[#007F73] disabled:opacity-60 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
->>>>>>> 7c1efe61800a232852d74638a245ab69db8ed95b
         >
           <Send className="w-4 h-4" />
           <span>{submitting ? 'Submitting securely...' : 'Submit Redacted Report'}</span>
